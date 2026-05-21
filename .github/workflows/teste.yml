@@ -1,0 +1,19 @@
+name: Pipeline Calculadora
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+      - teste
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar projeto
+        uses: actions/checkout@v3
+
+      - name: Mensagem
+        run: echo "Pipeline funcionando com sucesso!"
